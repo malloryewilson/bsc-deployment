@@ -5,7 +5,7 @@
       This is the title that appears in the browser tab.
       Replace it with the title of your app
     -->
-    <title>Spring Fawn Predictor</title>
+    <title>Movie Recommendation System</title>
     <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
     <!-- If you add custom CSS, put it after the above bootstrap link -->
   </head>
@@ -17,7 +17,7 @@
       -->
       <div class="jumbotron">
         <!-- Replace with the name of your app-->
-        <h1 class="display-4">Spring Fawn Predictor</h1>
+        <h1 class="display-4">Movie Recommendation System</h1>
       </div>
       <!-- This section contains a photo + the form for the user to enter data-->
       <div class="container"> 
@@ -28,14 +28,14 @@
               applicable). It will automatically fill the same width as the
               template version due to CSS styling.
             -->
-            <img src="/static/antelope_photo.jpg" alt="antelope" style="width: 100%;">
+            <img src="/static/movies_image.jpg" alt="Movies!" style="width: 100%;">
             <span style="font-size: small;">Photo by
-              <a href="https://unsplash.com/@bluespot?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Eshwar charan
+              <a href="https://www.successyeti.com/inspiration/5-life-lessons-we-have-learnt-from-movies/2021/08/09">
+                Elvisa Dabre
               </a>
               on
-              <a href="https://unsplash.com/s/photos/antelope-wyoming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Unsplash
+              <a href="https://www.successyeti.com/inspiration/5-life-lessons-we-have-learnt-from-movies/2021/08/09">
+                SUCCESSYETI
               </a>
             </span>
           </div>
@@ -56,25 +56,8 @@
               nested <div>s to achieve the desired layout
             -->
             <form action="/make_prediction" method="post">
-              <label for="input-1">Adult Antelope Population (Hundreds)</label>
-              <input type="text" id="input-1" name="adult_antelope_population" value="7.2">
-              <br>
-              <label for="input-2">Annual Precipitation (Inches)</label>
-              <input type="text" id="input-2" name="annual_precipitation" value="10.8">
-              <br>
-              <label for="input-3">Winter Severity Index</label>
-              <!--
-                Note on "select" (drop-down): the value is what is sent as the
-                value in the params dictionary, the text between the tags is
-                what the user sees
-              -->
-              <select id="input-3" name="winter_severity_index">
-                <option value="1.0">1 (Mild)</option>
-                <option value="2.0">2</option>
-                <option value="3.0">3</option>
-                <option value="4.0">4</option>
-                <option value="5.0">5 (Severe)</option>
-              </select>
+              <label for="input-1">Movie Title</label>
+              <input type="text" id="input-1" name="movie_title" value="Harry Potter and the Chamber of Secrets (2002)">
               <br>
               <!-- You shouldn't need to change the submit button -->
               <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
@@ -92,17 +75,13 @@
           previous line
         -->
         <p>
-          Some cool content will go here
+         
         </p>
         <p>
-          This app predicts the number of spring fawns in an antelope
-          population, based on data from the Bureau of Land Management
+          This app predicts the top 10 most similar movies compared to the movie selected by a user. 
         </p>
         <p>
-          More hence that dear evenly gulped much opposite seagull some from regardless more prudently so rational howled as much
-          out inclusive heinous melodious. And however one that chose much a as as went and bled hello wow gracefully wolf joyfully drew some amongst reckless much
-          dear shut excellent caribou glowered moistly this up telepathic characteristically one. Far when irrational well adoring or buffalo then much and a and and iguana due monkey some where instead this forlorn
-          macaw swift and and the much evident hey far goodness yikes jeez conductively.
+          Our model takes into consideration the rating and number of ratings for each movie in order to best predict the most similar movies for each movie selected. The movies with the strongest correlation are recommended.
         </p>
       </div>
     </div>
